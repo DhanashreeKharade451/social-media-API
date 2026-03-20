@@ -20,7 +20,37 @@ This improves:
 Security (no hardcoded secrets)
 Flexibility (different configs for dev/test/prod)
 Maintainability
+
 *******************************************************************************
+Q3.
 If your application failed to connect, what are the first few steps you would take to debug the issue?
-Lesson 2: MongoDB Atlas & Connecting an App
-Lesson 3
+
+Ans:
+***
+I
+Check the connection string:
+Ensure the username, password, and cluster URL are correct
+Confirm the database name is included,
+
+Verify environment variables:
+Make sure .env is properly loaded
+Check for typos like MONGO_URI vs Mongo_URI,
+
+Check network access settings:
+Ensure my IP address is whitelisted in MongoDB Atlas
+Confirm 0.0.0.0/0 is enabled (for development),
+
+Validate database user credentials:
+Confirm the user exists and has correct permissions
+
+Check server logs:
+Look at error messages in the terminal for clues
+
+Test connection manually:
+Use MongoDB Compass or Atlas UI to verify connectivity
+
+Restart the server:
+Sometimes environment variables require a restart to take effect
+
+By following these steps, I can systematically identify and resolve the connection issue.
+********************************************************************
